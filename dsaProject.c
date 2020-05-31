@@ -39,7 +39,7 @@ void MCMO(int p[], int n)
                   M[i][j]=cost;
                   bracket[i][j]=k;
                }
-	       printf("The cost of M[%d][%d] is %lld at k equal to %d \n",i,j,cost);
+	       printf("The cost of M[%d][%d] is %lld at k equal to %d \n",i,j,cost,k);
             }
         }
 	printf("\n");
