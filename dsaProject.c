@@ -6,13 +6,13 @@ void PrintParenthesis(int i, int j, int n, int *bracket, char &Mname)
 {
     if(i==j)
     {
-        cout<<Mname++;
+        printf("%c",Mname++);
         return;
     }
-    cout<<"(";
+    printf"(";
     PrintParenthesis(i,*((bracket+i*n)+j),n,bracket,Mname);
     PrintParenthesis(*((bracket+i*n)+j)+1,j,n,bracket,Mname);
-    cout<<")";
+    printf")";
 }
 void MCMO(int p[], int n)
 {
@@ -40,33 +40,33 @@ void MCMO(int p[], int n)
         }
     }
 
-    cout<<"\nThe Cost-Matrix is given by:\n";
+    printf("\nThe Cost-Matrix is given by:\n");
     for(int i=1;i<n;i++)
     {
         for(int j=1;j<n;j++)
         {
             if(i>j)
-                cout<<"X\t";
+                printf("X\t");
             else
-                cout<<M[i][j]<<"\t";
+                printf("%d \t",M[i][j]);
         }
-        cout<<endl;
+        printf("\n");
     }
-    cout<<"\nOptimal Cost:"<<M[1][n-1]<<endl;
-    cout<<"Optimal Parenthesization:";
+    printf("\nOptimal Cost:%d",M[1][n-1]);
+    printf("Optimal Parenthesization:");
     char Mname='A';
     PrintParenthesis(1,n-1,n,(int *)bracket,Mname);
 }
 int main()
 {
     int n;
-    cout<<"Enter number of matrices:";
-    cin>>n;
+    printf("Enter number of matrices:");
+    scanf("%d",&n);
     int arr[n+1];
-    cout<<"Enter dimensions of the matrices:"<<endl;
+    printf("Enter dimensions of the matrices:\n");
     for(int i=0;i<n;i++)
     {
-       cin>>arr[i];
+       scnaf("%d",arr[i]);
        MCMO(arr,n+1);
        getch();
        return 0;
