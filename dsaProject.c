@@ -87,7 +87,7 @@ void MCMO(int p[], int n)
         }
         printf("\n"); //bracket
     }
-    printf("\nOptimal Cost: %d \n",M[1][n-1]);
+    printf("\nOptimal Cost: %lld \n",M[1][n-1]);
      printf("Optimal Parenthesization:");
     PrintParenthesis(1,n-1,n,(int *)bracket);
 }
