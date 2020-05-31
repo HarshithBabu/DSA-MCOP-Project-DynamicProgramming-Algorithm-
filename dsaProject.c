@@ -2,17 +2,18 @@
 #include<iostream>
 #include<conio.h>
 using namespace std;
-void PrintParenthesis(int i, int j, int n, int *bracket, char &Mname)
+void PrintParenthesis(int i, int j, int n, int *bracket)
 {
+    static int ind=1;
     if(i==j)
     {
         printf("%c",Mname++);
         return;
     }
-    printf"(";
+    printf("(");
     PrintParenthesis(i,*((bracket+i*n)+j),n,bracket,Mname);
     PrintParenthesis(*((bracket+i*n)+j)+1,j,n,bracket,Mname);
-    printf")";
+    printf(")");
 }
 void MCMO(int p[], int n)
 {
