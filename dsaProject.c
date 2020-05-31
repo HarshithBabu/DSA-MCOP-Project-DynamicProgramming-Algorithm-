@@ -1,32 +1,19 @@
 
-<<<<<<< HEAD
-#include<stdio.h>
-#include<conio.h>
-using namespace std;
-void PrintParenthesis(int i, int j, int n, int *bracket)
-{
-    static int ind=1;
-=======
 #include<stdio.h>
 #include<limits.h>
 #include<stdlib.h>
 void PrintParenthesis(int i, int j, int n, int *bracket)
-{   
-    static char Mname='A';
->>>>>>> df654c180570f876acfe04cb4913b4c76f08850f
+{
+    static int ind=1;
     if(i==j)
     {
-        printf("%c",Mname++);
+        printf("A");
+        printf("%d",ind++);
         return;
     }
     printf("(");
-<<<<<<< HEAD
-    PrintParenthesis(i,*((bracket+i*n)+j),n,bracket,Mname);
-    PrintParenthesis(*((bracket+i*n)+j)+1,j,n,bracket,Mname);
-=======
     PrintParenthesis(i,*((bracket+i*n)+j),n,bracket);
     PrintParenthesis(*((bracket+i*n)+j)+1,j,n,bracket);
->>>>>>> df654c180570f876acfe04cb4913b4c76f08850f
     printf(")");
 }
 void MCMO(int p[], int n)
